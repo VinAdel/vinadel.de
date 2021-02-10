@@ -5974,6 +5974,10 @@ hr {
   -moz-osx-font-smoothing: grayscale;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 strong {
   font-weight: 600;
 }

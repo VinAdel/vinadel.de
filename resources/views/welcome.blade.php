@@ -23,15 +23,15 @@
                 <div class="header-box">
                     <div class="center">
                         <strong>Registrieren</strong>
-                        Und Alle Vorteile von vinadel Nutzen!
+                        Und Alle Vorteile von VinAdel Nutzen!
                     </div>
                     <hr>
                     <form action="" method="post">
                         @csrf
 
                         <div>
-                            <label for="email" class="input-title">Email</label>
-                            <input type="email" name="email" id="email" required>
+                            <label for="username" class="input-title">Benutzername</label>
+                            <input type="text" name="username" id="username" required>
                         </div>
 
                         <div>
@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="five columns text right">
-                <h1>Abruf bereit!</h1>
+                <h1>auf Abruf bereit!</h1>
                 <div>
                     Mit nur <strong>minimalen</strong> Aufwand an Code, zugang zu <strong>Unmengen</strong> an <strong>Daten</strong> erhalten! Außerdem speichern wir alle Bilder auf unserem Server!
                 </div>

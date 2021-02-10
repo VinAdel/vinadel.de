@@ -90,7 +90,7 @@
                     </div>
                     <div class="six columns">
                         <strong>Über uns</strong>
-                        VinAdel.de ist ein internationales Habbo Projekt, welches gegründet wurde, um Daten für Fanseiten und Co. leichter zugänglich zu machen.
+                        vinadel.de ist ein internationales Habbo Projekt, welches gegründet wurde, um Daten für Fanseiten und Co. leichter zugänglich zu machen.
                     </div>
                     <div class="box"></div>
                 </div>
