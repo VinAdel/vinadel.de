@@ -31,6 +31,7 @@
         <!-- JS -->
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
         <script defer src="{{ asset('js/app.js') }}"></script>
+        @yield('JS')
 
         <!-- CSS -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -64,15 +65,31 @@
             <div class="container">
                 <div class="app-info">
                     VinAdel
+                    <div class="app-desc">
+                        &copy; 2021 VinAdel - Alle Rechte vorbehalten.
+                    </div>
                 </div>
                 <div class="row">
                     <div class="three columns">
-                        <strong>Test</strong>
+                        <strong>VinAdel</strong>
+                        <a href="#">Startseite</a><br>
+                        <a href="#">Kontakt</a><br>
+                        <a href="#">Anmelden</a><br>
+                        <a href="#">Registrieren</a>
                     </div>
-                    <div class="three columns"></div>
-                    <div class="three columns"></div>
-                    <div class="three columns"></div>
+                    <div class="three columns">
+                        <strong>Informationen</strong>
+                        <a href="#">Nutzungsbedingugen</a><br>
+                        <a href="#">Datenschutz</a><br>
+                        <a href="#">Sprache</a>
+                    </div>
+                    <div class="six columns">
+                        <strong>Über uns</strong>
+                        VinAdel.de ist ein internationales Habbo Projekt, welches gegründet wurde, um Daten für Fanseiten und Co. leichter zugänglich zu machen.
+                    </div>
+                    <div class="box"></div>
                 </div>
+                <div class="crocodile"></div>
             </div>
         </footer>
     </body>

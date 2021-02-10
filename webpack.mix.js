@@ -18,3 +18,4 @@ mix
 
     // WELCOME
     .sass('resources/sass/view/welcome.scss', 'public/css/view')
+    .js('resources/js/view/welcome.js', 'public/js/view')

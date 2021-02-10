@@ -6,13 +6,12 @@
 
 section {
 
-    padding: 50px 0;
+    padding: 75px 0;
     position: relative;
 
     &:nth-child(even):not(.header) {
 
         background-color: $dark-third-background-color;
-        padding: 350px 0;
 
         .box {
 
@@ -24,55 +23,15 @@ section {
 
         }
 
-        &::before {
-
-            content: "";
-            background-image: url('/img/wave_top_1.svg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            position: absolute;
-            top: 0;
-            left:0;
-            width: 100%;
-            height: 300px;
-
-        }
-
-        &:not(:last-child) {
-
-            &::after {
-
-                content: "";
-                background-image: url('/img/wave_bottom_1.svg');
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-                position: absolute;
-                bottom: 0;
-                left:0;
-                width: 100%;
-                height: 300px;
-
-            }
-
-        }
-
-        &:last-child {
-
-            padding: 350px 0 50px 0;
-
-        }
-
     }
 
     .box {
 
         color: $dark-third-font-color;
-        border: 2px dashed rgba(0,0,0, .5);
+        border: 2px dashed rgba(0,0,0, .3);
         padding: 15px;
         border-radius: 6px;
-        margin: 10px 0 0 0;
+        margin: 25px 0 25px 0;
         position: relative;
 
         >.title {
@@ -85,7 +44,14 @@ section {
             height: 30px;
             line-height: 30px;
             padding: 0 10px;
-            font-weight: 700;
+            font-weight: 600;
+
+            &.right {
+
+                right: 5px;
+                left: initial;
+
+            }
 
         }
 
@@ -93,7 +59,7 @@ section {
     
     &.header {
 
-        background-image: linear-gradient(to bottom right, #de6161, #333399);
+        background-image: linear-gradient(to bottom right, $purple, $blue);
         width: 100%;
         height: 700px;
         overflow: hidden;
@@ -112,6 +78,7 @@ section {
 
                     >h1 {
 
+                        font-size: 6.5rem;
                         margin: 0;
                         font-weight: 700;
                         color: $dark-font-color;
@@ -128,7 +95,7 @@ section {
                 color: $light-font-color;
                 padding: 20px;
                 border-radius: 6px;
-                box-shadow: 0 2px rgba(0,0,0, 0.12);
+                box-shadow: 0 2px rgba(0,0,0, .12);
                 position: relative;
                 z-index: 2;
 
@@ -143,7 +110,7 @@ section {
 
                     margin: 0;
 
-                    >span {
+                    >div {
 
                         position: relative;
                         
@@ -155,7 +122,7 @@ section {
                             text-transform: uppercase;
                             font-weight: 700;
                             position: absolute;
-                            top: -30px;
+                            top: -15px;
                             left: 10px;
                             height: 30px;
                             line-height: 30px;
@@ -200,7 +167,7 @@ section {
 
                     >strong {
 
-                        color: $light-second-font-color;
+                        color: $light-third-font-color;
                         display: block;
                         font-size: 2.5rem;
                         margin: 0 0 15px 0;
@@ -332,77 +299,157 @@ section {
 
     }
 
-}
-
-@include media("<desktop") {
-
-    nav {
+    &.api {
 
         >.container {
 
-            >.menu {
+            >.row {
 
-                display: none;
+                >.columns {
 
-            }
+                    >.code {
 
-            >.burger {
+                        overflow: hidden;
+                        background-color: $dark-second-background-color;
+                        padding: 20px;
+                        border-radius: 6px;
+                        box-shadow: 0 2px rgba(0,0,0, .12);
+                        width: 100%;
 
-                display: block;
+                        >.menu {
 
-            }
+                            border-bottom: 1px solid $dark-third-background-color;
+                            margin: -20px -20px 20px -20px;
+                            padding: 20px;
+                            display: flex;
+                            align-items: center;
 
-        }
+                            >div {
 
-    }
+                                height: 35px;
+                                padding: 0 15px;
+                                cursor: pointer;
+                                font-weight: 600;
+                                transition: background-color .25s ease-in-out,
+                                            box-shadow .25s ease-in-out;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 6px;
+                                margin-right: 10px;
 
-    nav.responsive {
+                                &.active,
+                                &:hover {
 
-        height: auto;
+                                    background-color: $dark-background-color;
 
-        >.container {
+                                }
 
-            >.menu {
+                            }
 
-                display: flex;
-                width: 100%;
-                justify-content: center;
-                flex-direction: column;
-                margin: 0 0 30px 0;
+                        }
 
-                >div {
+                        >div {
 
-                    margin: 0 0 10px 0;
-                    padding: 3px 10px;
-                    border-radius: 6px;
-                    background-color: #323232;
-                    width: 150px;
-                    display: flex;
-                    justify-content: space-between;
+                            display: none;
 
-                    &:last-child { margin:0; }
+                            &.active {
+
+                                display: block;
+
+                            }
+
+                            >pre {
+
+                                white-space: pre-line;
+                                margin: 0;
+
+                                span {
+
+                                    &.blue { color: $blue; }
+                                    &.purple { color: $purple; }
+                                    &.yellow { color: $yellow; }
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    >button {
+
+                        font-family: $font-family;
+                        background-color: $light-background-color;
+                        font-weight: 700;
+                        display: block;
+                        margin: 0;
+                        border: 0;
+                        float: right;
+
+                        &::before,
+                        &::after {
+
+                            content: "";
+                            clear: both;
+
+                        }
+
+                    }
 
                 }
 
             }
 
-            >.burger,
-            >.logo {
-
-                height: 80px;
-                flex: 0 50%;
-
-            }
-
-            >.burger {
-
-                display: block;
-
-            }
-
         }
 
     }
+
+    &.interest {
+
+        background-image: linear-gradient(to bottom, $dark-third-background-color, transparent, $dark-background-color), url('/img/backlarge.png');
+        padding: 100px 0;
+
+        >.container {
+
+            >.row {
+
+                >.columns {
+
+                    >a {
+
+                        width: 100%;
+
+                        >button {
+
+                            font-family: $font-family;
+                            background-color: $light-background-color;
+                            color: $light-second-font-color;
+                            border:0;
+                            font-weight: 700;
+                            font-size: 1.1rem;
+                            margin:0;
+                            height: auto;
+                            width: 100%;
+                            padding: 10px;
+                            box-shadow: 0 2px rgba(0,0,0, .12);
+
+                        }
+
+                    }
+
+                }
+
+            }
+            
+        }
+
+    }
+
+}
+
+@include media("<desktop") {
 
     section {
 
@@ -435,24 +482,6 @@ section {
 }
 
 @include media("<tablet") {
-
-    nav.responsive {
-
-        >.container {
-
-            >.menu {
-
-                >div {
-
-                    width: 100%;
-
-                }
-
-            }
-
-        }
-
-    }
 
     section {
 

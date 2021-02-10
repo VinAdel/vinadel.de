@@ -1,7 +1,7 @@
 // Theme dark variables
 $dark: #121212;
 $dark-second: #222222;
-$dark-third: #323232;
+$dark-third: #282828;
 
 // Theme light variables
 $light: #ffffff;
@@ -11,6 +11,7 @@ $light-third: #696969;
 // Colors
 $blue: #1084dd;
 $purple: #de6161;
+$yellow: #ffc107;
 
 // Document
 $font-family: "Titillium Web", sans-serif;
@@ -18,9 +19,11 @@ $font-family: "Titillium Web", sans-serif;
 // Light
 $light-background-color: $light;
 $light-second-background-color: $light-second;
+$light-third-background-color: $light-third;
 
 $light-font-color: $dark;
 $light-second-font-color: $dark-second;
+$light-third-font-color: $dark-third;
 
 $light-border-color: $light-second;
 
