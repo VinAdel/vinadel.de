@@ -74,8 +74,13 @@
                         <strong>VinAdel</strong>
                         <a href="#">Startseite</a><br>
                         <a href="#">Kontakt</a><br>
+                        @guest
                         <a href="#">Anmelden</a><br>
                         <a href="#">Registrieren</a>
+                        @endguest
+                        @auth
+                        <a href="#">Einstellungen</a>
+                        @endauth
                     </div>
                     <div class="three columns">
                         <strong>Informationen</strong>

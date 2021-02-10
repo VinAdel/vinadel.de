@@ -51,7 +51,7 @@
         </div>
     </div>
 </section>
-<section>
+<section class="welcome">
     <div class="container">
         <div class="row flex vertical-center">
             <div class="seven columns">

@@ -299,6 +299,12 @@ section {
 
     }
 
+    &.welcome {
+
+        padding: 25px 0 75px 0;
+
+    }
+
     &.api {
 
         >.container {
@@ -428,7 +434,7 @@ section {
                             color: $light-second-font-color;
                             border:0;
                             font-weight: 700;
-                            font-size: 1.1rem;
+                            font-size: 1.3rem;
                             margin:0;
                             height: auto;
                             width: 100%;
@@ -469,12 +475,57 @@ section {
 
                         text-align: center;
 
+                        h1 {
+
+                            font-size: 5rem;
+
+                        }
+
                     }
 
                 }
 
             }
             
+        }
+
+        &.api {
+
+            >.container {
+
+                >.row {
+
+                    flex-direction: column-reverse;
+
+                    >.columns {
+
+                        >.code {
+
+                            margin: 50px 0 0 0;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        &.interest {
+
+            >.container {
+
+                >.row {
+
+                    flex-direction: column;
+                    text-align: center;
+
+                }
+
+            }
+
         }
 
     }
