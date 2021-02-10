@@ -44,6 +44,9 @@
             @yield('sidebar')
         </section>
         <section class="image">
+            <div id="stars-00"></div>
+            <div id="stars-01"></div>
+            <div id="stars-02"></div>
             <div>
                 <h1>
                     Das erwartet dich! <br>

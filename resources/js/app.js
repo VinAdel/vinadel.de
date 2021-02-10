@@ -27,7 +27,3 @@ $('a[href*="#"]')
         }
     }
 });
-
-$(() => {
-    $("nav > div > div.menu > div.dropdown > div.dropdown-position").css("bottom", 10-$("nav > div > div.menu > div.dropdown > div.dropdown-position").height());
-})

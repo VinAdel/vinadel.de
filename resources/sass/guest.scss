@@ -180,18 +180,23 @@ section {
         >div {
 
             position: relative;
-            z-index: 1;
+            z-index: 2;
             text-align: center;
             text-shadow: 0 3px 6px rgba(0,0,0, .16);
             
             >h1 {
 
-                font-size: 7.5rem;
+                font-size: 7rem;
+                text-transform: uppercase;
+                font-weight: 700;
 
                 >span {
 
+                    text-transform: initial;
                     display: block;
                     margin: 20px 0 0 0;
+                    font-weight: 400;
+                    font-size: 9rem;
 
                 }
 
@@ -209,8 +214,104 @@ section {
             left: 0;
             width: 100%;
             height: 100%;
+            z-index: 1;
+
+        }
+
+        $bg-00: #1B2735;
+        $bg-01: #090A0F;
+
+        $star-color: $dark-font-color;    
+
+        @function multiple-bs ($n) {
+            $value: "#{random(2000)}px #{random(2000)}px #{$star-color}";
+            @for $i from 2 through $n {
+                $value: "#{$value}, #{random(2000)}px #{random(2000)}px #{$star-color}";
+            }
+            @return unquote($value)
+        }
+
+        $bs-large: multiple-bs(800);
+        $bs-medium: multiple-bs(600);
+        $bs-small: multiple-bs(200);
+    
+        #stars {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            background-color: transparent;
+            animation: float-stars linear infinite;
             z-index: 0;
 
+            &-00 {
+
+                width: 1px;
+                height: 1px;
+                box-shadow: $bs-small;
+                @extend #stars;
+                animation-duration: 100s;
+
+                &:after {
+
+                    width: 1px;
+                    height: 1px;
+                    box-shadow: $bs-small;
+    
+                }
+
+            }
+
+            &-01 {
+            
+                width: 2px;
+                height: 2px;
+                box-shadow: $bs-medium;
+                @extend #stars;
+                animation-duration: 150s;
+
+                &:after {
+
+                    width: 2px;
+                    height: 2px;
+                    box-shadow: $bs-medium;
+
+                }
+
+            }
+
+            &-02 {
+                
+                width: 3px;
+                height: 3px;
+                box-shadow: $bs-large;
+                @extend #stars;
+                animation-duration: 200s;
+
+                &:after {
+
+                    width: 3px;
+                    height: 3px;
+                    box-shadow: $bs-large;
+
+                }
+            }
+
+            &:after {
+
+                content: "";
+                position: absolute;
+                top: 2000px;
+                background-color: transparent;
+
+            }
+
+        }
+
+        @keyframes float-stars {
+        from { transform: translateY(0px) }
+        to { transform: translateY(-2000px) }
         }
 
     }

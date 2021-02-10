@@ -1868,9 +1868,6 @@ $('a[href*="#"]') // Remove links that don't actually link to anything
     }
   }
 });
-$(function () {
-  $("nav > div > div.menu > div.dropdown > div.dropdown-position").css("bottom", 10 - $("nav > div > div.menu > div.dropdown > div.dropdown-position").height());
-});
 
 /***/ }),
 

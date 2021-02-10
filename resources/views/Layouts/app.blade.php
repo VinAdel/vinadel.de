@@ -89,11 +89,11 @@
                 <div class="row">
                     <div class="three columns">
                         <strong>VinAdel</strong>
-                        <a href="#">Startseite</a><br>
+                        <a href="{{ Auth::check() ? route('auth.home') : route('guest.welcome') }}">Startseite</a><br>
                         <a href="#">Kontakt</a><br>
                         @guest
-                        <a href="#">Anmelden</a><br>
-                        <a href="#">Registrieren</a>
+                        <a href="{{ route('guest.login') }}">Anmelden</a><br>
+                        <a href="{{ route('guest.register') }}">Registrieren</a>
                         @endguest
                         @auth
                         <a href="#">Einstellungen</a>
