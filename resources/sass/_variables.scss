@@ -26,6 +26,8 @@ $light-second-font-color: $dark-second;
 $light-third-font-color: $dark-third;
 
 $light-border-color: $light-second;
+$light-second-border-color: $light-third;
+$light-third-border-color: $light;
 
 // Dark
 $dark-background-color: $dark;
@@ -35,3 +37,7 @@ $dark-third-background-color: $dark-third;
 $dark-font-color: $light;
 $dark-second-font-color: $light-second;
 $dark-third-font-color: $light-third;
+
+$dark-border-color: $dark-second;
+$dark-second-border-color: $dark-third;
+$dark-third-border-color: $dark;

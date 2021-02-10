@@ -1868,6 +1868,9 @@ $('a[href*="#"]') // Remove links that don't actually link to anything
     }
   }
 });
+$(function () {
+  $("nav > div > div.menu > div.dropdown > div.dropdown-position").css("bottom", 10 - $("nav > div > div.menu > div.dropdown > div.dropdown-position").height());
+});
 
 /***/ }),
 
@@ -19079,6 +19082,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/guest.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/guest.scss ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./resources/sass/view/welcome.scss":
 /*!******************************************!*\
   !*** ./resources/sass/view/welcome.scss ***!
@@ -19372,6 +19388,7 @@ process.umask = function() { return 0; };
 /******/ 		var deferredModules = [
 /******/ 			["./resources/js/app.js"],
 /******/ 			["./resources/sass/app.scss"],
+/******/ 			["./resources/sass/guest.scss"],
 /******/ 			["./resources/sass/view/welcome.scss"]
 /******/ 		];
 /******/ 		// no chunk on demand loading

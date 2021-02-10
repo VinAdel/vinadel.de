@@ -1,0 +1,261 @@
+// Variables
+@import '_variables.scss';
+
+// Media query
+@import '_media-query.scss';
+
+body,
+html {
+
+    height: 100%;
+
+}
+
+section {
+
+    display: inline-block;
+
+    &.sidebar {
+
+        background-color: $dark-background-color;
+        color: $dark-second-font-color;
+        width: 25%;
+        height: 100%;
+        float: left;
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        >.form {
+
+            >.center {
+
+                width: 100%;
+                text-align: center;
+                color: #aaa;
+                margin: 0 0 50px 0;
+
+                >strong {
+
+                    color: $dark-second-font-color;
+                    display: block;
+                    font-size: 2.5rem;
+                    margin: 0 0 15px 0;
+
+                }
+
+            }
+
+            >form {
+
+                >div {
+
+                    position: relative;
+                    
+                    >.input-title {
+    
+                        background-color: $dark-background-color;                   
+                        color: $dark-second-font-color;
+                        font-size: 1.2rem;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        position: absolute;
+                        top: -15px;
+                        left: 10px;
+                        height: 30px;
+                        line-height: 30px;
+                        padding: 0 10px;
+    
+                    }
+    
+                    >input {
+    
+                        font-family: $font-family;
+                        background-color: $dark-background-color;
+                        border: 2px solid $dark-border-color;
+                        color: $dark-second-font-color;
+                        width: 100%;
+                        height: auto;
+                        padding: 15px 20px;
+                        margin: 0 0 30px 0;
+    
+                    }
+
+                    &.remember {
+
+                        border: 2px dashed $dark-second-background-color;
+                        padding: 0 10px;
+                        height: 50px;
+                        border-radius: 6px;
+                        margin: 0 0 30px 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        overflow: hidden;
+                        cursor: pointer;
+
+                        >.icon {
+
+                            border-radius: 6px;
+                            width: 30px;
+                            height: 30px;
+                            background-color: $blue;
+
+                            >i { 
+
+                                display: none;
+                                font-size: 2rem; 
+
+                            }
+
+                        }
+
+                    }
+
+                    &.forgot {
+
+                        color: $dark-third-font-color;
+                        text-align: center;
+                        margin: 0 0 30px 0;
+                        cursor: pointer;
+                        transition: color .2s ease-in-out;
+
+                        &:hover {
+
+                            color: $dark-second-font-color;
+
+                        }
+
+                    }
+
+                    &.switch {
+
+                        color: $dark-third-font-color;
+                        margin: 5px 0 0 0;
+                        text-align: center;
+
+                        >span {
+
+                            color: $blue;
+                            cursor: pointer;
+
+                        }
+
+                    }
+    
+                }
+    
+                button {
+    
+                    font-family: $font-family;
+                    background-color: $blue;
+                    color: $dark-font-color;
+                    border: 0;
+                    height: auto;
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 1.3rem;
+                    cursor: pointer;
+    
+                }
+
+            }
+
+        }
+
+    }
+
+    &.image {
+
+        background-image: linear-gradient(to bottom right, $purple, $blue);
+        height: 100%;
+        width: 75%;
+        float: right;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        >div {
+
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            text-shadow: 0 3px 6px rgba(0,0,0, .16);
+            
+            >h1 {
+
+                font-size: 7.5rem;
+
+                >span {
+
+                    display: block;
+                    margin: 20px 0 0 0;
+
+                }
+
+            }
+
+        }
+
+        &::after {
+
+            content: "";
+            background: url('/img/h_bg_02.svg') bottom center no-repeat;
+            background-size: cover;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+
+        }
+
+    }
+
+}
+
+@include media("<desktop") {
+
+    section {
+
+        &.sidebar {
+
+            width: 50%;
+
+        }
+
+        &.image {
+
+            width: 50%;
+
+        }
+
+    }
+
+}
+
+@include media("<tablet") {
+
+    section {
+
+        &.sidebar {
+
+            float: initial;
+            width: 100%;
+            min-height: 100%;
+            height: auto;
+
+        }
+
+        &.image {
+
+            display: none;
+
+        }
+
+    }
+
+}

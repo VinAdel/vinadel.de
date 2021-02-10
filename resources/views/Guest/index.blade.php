@@ -23,15 +23,15 @@
                 <div class="header-box">
                     <div class="center">
                         <strong>Registrieren</strong>
-                        Und Alle Vorteile von VinAdel Nutzen!
+                        Und alle Vorteile von VinAdel Nutzen!
                     </div>
                     <hr>
-                    <form action="" method="post">
+                    <form action="{{ route('guest.register.post') }}" method="post">
                         @csrf
 
                         <div>
-                            <label for="username" class="input-title">Benutzername</label>
-                            <input type="text" name="username" id="username" required>
+                            <label for="name" class="input-title">Benutzername</label>
+                            <input type="text" name="name" id="name" required>
                         </div>
 
                         <div>

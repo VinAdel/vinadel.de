@@ -6087,6 +6087,56 @@ nav > .container > .burger > div {
   justify-content: flex-end;
   height: 100%;
 }
+nav > .container > .menu > div.dropdown,
+nav > .container > .burger > div.dropdown {
+  position: relative;
+}
+nav > .container > .menu > div.dropdown:hover > .dropdown-position,
+nav > .container > .burger > div.dropdown:hover > .dropdown-position {
+  display: block;
+}
+nav > .container > .menu > div.dropdown > .dropdown-position,
+nav > .container > .burger > div.dropdown > .dropdown-position {
+  width: calc( 100% + 40px );
+  position: absolute;
+  display: none;
+}
+nav > .container > .menu > div.dropdown > .dropdown-position > .dropdown-content,
+nav > .container > .burger > div.dropdown > .dropdown-position > .dropdown-content {
+  background-color: #ffffff;
+  color: #121212;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.12);
+  padding: 5px;
+  border-radius: 3px;
+  text-align: right;
+  position: relative;
+  font-size: 1.3rem;
+}
+nav > .container > .menu > div.dropdown > .dropdown-position > .dropdown-content > div,
+nav > .container > .burger > div.dropdown > .dropdown-position > .dropdown-content > div {
+  padding: 5px;
+  border-radius: 3px;
+  transition: background-color 0.2s ease-in-out;
+}
+nav > .container > .menu > div.dropdown > .dropdown-position > .dropdown-content > div:hover,
+nav > .container > .burger > div.dropdown > .dropdown-position > .dropdown-content > div:hover {
+  background-color: #ededed;
+}
+nav > .container > .menu > div.dropdown > .dropdown-position > .dropdown-content::after,
+nav > .container > .burger > div.dropdown > .dropdown-position > .dropdown-content::after {
+  bottom: 100%;
+  right: 7px;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #fff;
+  border-width: 5px;
+  margin-left: -5px;
+}
 nav > .container > .menu > div > i,
 nav > .container > .burger > div > i {
   margin-right: 20px;
@@ -6178,6 +6228,17 @@ footer > .container .crocodile {
   }
   nav.responsive > .container > .menu > div:last-child {
     margin: 0;
+  }
+  nav.responsive > .container > .menu > div.dropdown {
+    flex-wrap: wrap;
+  }
+  nav.responsive > .container > .menu > div.dropdown > :not(.dropdown-position) {
+    flex: 0 50%;
+  }
+  nav.responsive > .container > .menu > div.dropdown > .dropdown-position {
+    position: initial;
+    width: 100%;
+    margin: 10px 0;
   }
   nav.responsive > .container > .burger,
 nav.responsive > .container > .logo {

@@ -127,6 +127,74 @@ nav {
                 justify-content: flex-end;
 				height: 100%;
 
+				&.dropdown {
+
+					position: relative;
+
+					&:hover {
+
+						>.dropdown-position {
+
+							display: block;
+
+						}
+
+					}
+
+					>.dropdown-position {
+
+						width: calc( 100% + 40px );
+						position: absolute;
+						display: none;
+
+						>.dropdown-content {
+
+							background-color: $light-background-color;
+							color: $light-font-color;
+							box-shadow: 0 0 6px 2px rgba(0,0,0, 0.12);
+							padding: 5px;
+							border-radius: 3px;
+							text-align: right;
+							position: relative;
+							font-size: 1.3rem;
+
+							> div {
+
+								padding: 5px;
+								border-radius: 3px;
+								transition: background-color .2s ease-in-out;
+
+								&:hover {
+
+									background-color: $light-second-background-color;
+
+								}
+
+							}
+
+							&::after {
+
+								bottom: 100%;
+								right: 7px;
+								border: solid transparent;
+								content: "";
+								height: 0;
+								width: 0;
+								position: absolute;
+								pointer-events: none;
+								border-color: rgba(255, 255, 255, 0);
+								border-bottom-color: #fff;
+								border-width: 5px;
+								margin-left: -5px;
+
+							}
+
+						}
+
+					}
+
+				}
+
 				>i {
 
 					margin-right: 20px;
@@ -286,6 +354,26 @@ footer {
                     justify-content: space-between;
 
                     &:last-child { margin:0; }
+
+					&.dropdown {
+
+						flex-wrap: wrap;
+
+						>:not(.dropdown-position) {
+
+							flex: 0 50%;
+
+						}
+
+						>.dropdown-position {
+
+							position: initial;
+							width: 100%;
+							margin: 10px 0;
+
+						}
+
+					}
 
                 }
 

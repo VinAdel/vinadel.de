@@ -37,7 +37,7 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         @yield('CSS')
     </head>
-    <body class="preload">  
+    <body>  
         <nav>
             <div class="container">
                 <div class="logo">VinAdel</div>
@@ -45,7 +45,7 @@
                     <div><i class="bi-list"></i></div>
                 </div>
                 <div class="menu">
-                    <div onclick="window.redirect('{{ route('welcome') }}')">
+                    <div onclick="window.redirect('{{ Auth::check() ? route('auth.home') : route('guest.welcome') }}')">
                         <i class="bi-house"></i>
                         Startseite
                     </div>
@@ -53,9 +53,26 @@
                         <i class="bi bi-chat-square-dots"></i>
                         Kontakt
                     </div>
-                    <div>
+                    <div class="dropdown">
                         <i class="bi bi-person-circle"></i>
+                        @guest
                         Gast
+                        <div class="dropdown-position">
+                            <div class="dropdown-content">
+                                <div onclick="window.redirect('{{ route('guest.login') }}')">Anmelden</div>
+                                <div onclick="window.redirect('{{ route('guest.register') }}')">Registrieren</div>
+                            </div>
+                        </div>
+                        @endguest
+                        @auth
+                        {{ Auth::user()->name }}
+                        <div class="dropdown-position">
+                            <div class="dropdown-content">
+                                <div>Einstellungen</div>
+                                <div>Abmelden</div>
+                            </div>
+                        </div>
+                        @endauth
                     </div>
                 </div>
             </div>

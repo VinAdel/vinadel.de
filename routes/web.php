@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+// Guest
+Route::middleware('guest')->name('guest.')->group(function() {
+    // Welcome
+    Route::get('/', function () { return view('Guest.index'); })->name('welcome');
+
+    // Register
+    Route::get('register', [Controllers\Guest\RegisterController::class, 'index'])->name('register');
+    Route::post('register', [Controllers\Guest\RegisterController::class, 'register'])->name('register.post');
+    
+    // Login
+    Route::get('login', [Controllers\Guest\LoginController::class, 'index'])->name('login');
+    Route::post('login', [Controllers\Guest\LoginController::class, 'login'])->name('login.post');
+});
+
+// Auth
+Route::middleware('auth')->name('auth.')->group(function() {
+    // Welcome
+    Route::get('/home', function () { return view('Auth.index'); })->name('home');
+});
