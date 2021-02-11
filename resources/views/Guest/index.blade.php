@@ -31,12 +31,12 @@
 
                         <div>
                             <label for="name" class="input-title">Benutzername</label>
-                            <input type="text" name="name" id="name" required>
+                            <input type="text" name="name" id="name" required autocomplete="nickname">
                         </div>
 
                         <div>
                             <label for="password" class="input-title">Passwort</label>
-                            <input type="password" name="password" id="password" required>
+                            <input type="password" name="password" id="password" required autocomplete="new-password">
                         </div>
 
                         <div>
@@ -86,21 +86,21 @@
                     </div>
                     <div class="php active">
                         <pre>
-                            <span class="blue">$key</span> = <span class="purple">"9c5d7f60-0958-4a93-88ff-62f6f9d611fd"</span>;
-                            <span class="blue">$endpoint</span> = <span class="purple">"https://api.vinadel.de/"</span>;
-                            <span class="blue">$contents</span> = <span class="yellow">file_get_contents</span>(<span class="blue">$endpoint</span> . <span class="blue">$key</span> . <span class="purple">"/{HOTEL}/badges"</span>);
+                            <span class="blue">$key</span> = <span class="pink">"9c5d7f60-0958-4a93-88ff-62f6f9d611fd"</span>;
+                            <span class="blue">$endpoint</span> = <span class="pink">"https://api.vinadel.de/"</span>;
+                            <span class="blue">$contents</span> = <span class="yellow">file_get_contents</span>(<span class="blue">$endpoint</span> . <span class="blue">$key</span> . <span class="pink">"/{HOTEL}/badges"</span>);
                             <span class="blue">$result</span> = <span class="yellow">json_decode</span>(<span class="blue">$contents</span>);
 
                             <span class="yellow">foreach</span>(<span class="blue">$result</span> as <span class="blue">$badge</span>)
-                                <span class="blue">$badge</span>[<span class="purple">'name'</span>];
+                                <span class="blue">$badge</span>[<span class="pink">'name'</span>];
                         </pre>
                     </div>
                     <div class="json">
                         <pre>
                             <span class="yellow">{</span>
-                                <span class="blue">name</span>: <span class="purple">"BADGE1"</span>,
-                                <span class="blue">description</span>: <span class="purple">"BADGE1"</span>,
-                                <span class="blue">image_url</span>: <span class="purple">"https://image.vinadel.de/{HOTEL}/badges/{name}.gif"</span>
+                                <span class="blue">name</span>: <span class="pink">"BADGE1"</span>,
+                                <span class="blue">description</span>: <span class="pink">"BADGE1"</span>,
+                                <span class="blue">image_url</span>: <span class="pink">"https://image.vinadel.de/{HOTEL}/badges/{name}.gif"</span>
                             <span class="yellow">}</span>, ...
                         </pre>
                     </div>

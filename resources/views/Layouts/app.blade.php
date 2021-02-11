@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+        <!-- CSRF TOKEN -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
         <!-- DOCUMENT TITLE -->
         <title>{{ config('app.name', 'Laravel') }}</title>
 
@@ -45,7 +48,7 @@
                     <div><i class="bi-list"></i></div>
                 </div>
                 <div class="menu">
-                    <div onclick="window.redirect('{{ Auth::check() ? route('auth.home') : route('guest.welcome') }}')">
+                    <div onclick="window.redirect('{{ Auth::check() ? route('auth.dashboard') : route('guest.welcome') }}')">
                         <i class="bi-house"></i>
                         Startseite
                     </div>
@@ -69,7 +72,7 @@
                         <div class="dropdown-position">
                             <div class="dropdown-content">
                                 <div>Einstellungen</div>
-                                <div>Abmelden</div>
+                                <div id="logout">Abmelden</div>
                             </div>
                         </div>
                         @endauth
@@ -89,7 +92,7 @@
                 <div class="row">
                     <div class="three columns">
                         <strong>VinAdel</strong>
-                        <a href="{{ Auth::check() ? route('auth.home') : route('guest.welcome') }}">Startseite</a><br>
+                        <a href="{{ Auth::check() ? route('auth.dashboard') : route('guest.welcome') }}">Startseite</a><br>
                         <a href="#">Kontakt</a><br>
                         @guest
                         <a href="{{ route('guest.login') }}">Anmelden</a><br>

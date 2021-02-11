@@ -31,6 +31,6 @@ class LoginController extends Controller
             "password" => $request->password
         ], $request->remember ? true : false);
 
-        return redirect()->route('auth.home');
+        return redirect()->route('auth.dashboard');
     }
 }

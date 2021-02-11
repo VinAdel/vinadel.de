@@ -31,5 +31,8 @@ Route::middleware('guest')->name('guest.')->group(function() {
 // Auth
 Route::middleware('auth')->name('auth.')->group(function() {
     // Welcome
-    Route::get('/home', function () { return view('Auth.index'); })->name('home');
+    Route::get('dashboard', function () { return view('Auth.index'); })->name('dashboard');
+
+    // Logout
+    Route::post('logout', [Controllers\Auth\LogoutController::class, 'logout'])->name('logout.post');
 });

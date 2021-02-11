@@ -11,12 +11,18 @@
 
         <div>
             <label for="name" class="input-title">Benutzername</label>
-            <input type="text" name="name" id="name" required>
+            <input type="text" name="name" id="name" required value="{{ old('name') }}">
+            @error('name')
+                {{ $message }}
+            @enderror
         </div>
 
         <div>
             <label for="name" class="input-title">Passwort</label>
             <input type="password" name="password" id="password" required>
+            @error('password')
+                {{ $message }}
+            @enderror
         </div>
 
         <div class="remember">

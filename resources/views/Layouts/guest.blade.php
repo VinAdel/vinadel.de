@@ -51,7 +51,7 @@
                 <h1>
                     Das erwartet dich! <br>
                     <span class="txt-rotate" data-period="1500"
-                    data-rotate='[ "100 APIs", "8.000 Badges", "2.500 Möbel", "vinadel.de" ]'></span>
+                    data-rotate='["100 APIs", "8.000 Badges", "2.500 Möbel", "vinadel.de"]'></span>
                 </h1>
             </div>
         </section>

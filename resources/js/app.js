@@ -1,5 +1,11 @@
 require('./bootstrap');
 
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+
 $(document).on("click", "nav > .container > .burger", function() {
     $("nav").toggleClass("responsive");
 });
@@ -22,8 +28,18 @@ $('a[href*="#"]')
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
         $('html, body').animate({
-          scrollTop: target.offset().top
+            scrollTop: target.offset().top
         }, 1000);
         }
     }
+});
+
+$(document).on("click", "#logout", () => {
+    $.ajax({
+        type: "POST",
+        url: "/logout",
+        dataType: "json",
+    }).done((response) => {
+        window.redirect(response.path);
+    });
 });
