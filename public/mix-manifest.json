@@ -3,6 +3,7 @@
     "/js/guest.js": "/js/guest.js",
     "/js/view/welcome.js": "/js/view/welcome.js",
     "/css/app.css": "/css/app.css",
+    "/css/view/dashboard.css": "/css/view/dashboard.css",
     "/css/view/welcome.css": "/css/view/welcome.css",
     "/css/guest.css": "/css/guest.css"
 }

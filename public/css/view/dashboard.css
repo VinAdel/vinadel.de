@@ -1,0 +1,42 @@
+section {
+  padding: 75px 0;
+}
+
+.box {
+  background-color: #282828;
+  padding: 15px;
+  border-radius: 6px;
+  position: relative;
+  margin: 0 0 35px 0;
+}
+.box.warning {
+  background-color: #B71C0C;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.box.warning > .warning-icon {
+  font-size: 2rem;
+}
+.box.warning > .warning-title {
+  font-weight: 600;
+}
+.box.warning > .warning-close-open {
+  float: right;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.box > .title {
+  background-color: #222222;
+  position: absolute;
+  top: -15px;
+  left: 5px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  font-weight: 600;
+}
+.box > .title.right {
+  right: 5px;
+  left: initial;
+}

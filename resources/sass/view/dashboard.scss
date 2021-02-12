@@ -1,0 +1,67 @@
+// Variables
+@import './../_variables.scss';
+
+section {
+
+    padding: 75px 0;
+
+}
+
+.box {
+
+    background-color: $dark-third-background-color;
+    padding: 15px;
+    border-radius: 6px;
+    position: relative;
+    margin: 0 0 35px 0;
+
+    &.warning {
+
+        background-color: $red;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        >.warning-icon {
+
+            font-size: 2rem;
+
+        }
+
+        >.warning-title {
+
+            font-weight: 600;
+
+        }
+
+        >.warning-close-open {
+
+            float: right;
+            font-size: 2rem;
+            font-weight: 600;
+
+        }
+
+    }
+
+    >.title {
+
+        background-color: $dark-second-background-color;
+        position: absolute;
+        top: -15px;
+        left: 5px;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 10px;
+        font-weight: 600;
+
+        &.right {
+
+            right: 5px;
+            left: initial;
+
+        }
+
+    }
+
+}

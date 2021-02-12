@@ -112,7 +112,6 @@
                         <strong>Über uns</strong>
                         vinadel.de ist ein internationales Habbo Projekt, welches gegründet wurde, um Daten für Fanseiten und Co. leichter zugänglich zu machen.
                     </div>
-                    <div class="box"></div>
                 </div>
                 <div class="crocodile"></div>
             </div>

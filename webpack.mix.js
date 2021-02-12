@@ -24,4 +24,7 @@ mix
     .sass('resources/sass/view/welcome.scss', 'public/css/view')
     .js('resources/js/view/welcome.js', 'public/js/view')
 
+    // DASHBOARD
+    .sass('resources/sass/view/dashboard.scss', 'public/css/view')
+
     .disableSuccessNotifications()
